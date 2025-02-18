@@ -1,0 +1,17 @@
+---
+import astroLogo from '../assets/astro.svg';
+import background from '../assets/background.svg';
+import { navLinks } from '../data/nav-data';
+
+---
+
+<nav class="flex justify-between items-center md:px-20 py-4 px-4 border-b">
+    <h2 class="text-2xl font-bold">Logo</h2>
+
+    <menu class="inline-block space-x-18">
+        {navLinks.map((link) => (
+            <a href={link.path}>{link.label}</a>
+        ))}
+    </menu>
+</nav>
+

@@ -1,0 +1,25 @@
+---
+import Header from '../components/Header.astro';
+import '../styles/global.css';
+import { ClientRouter } from 'astro:transitions';
+---
+
+<!doctype html>
+<html lang="en">
+	<heaad>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content="Astro description" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<ClientRouter />
+		<title>Astro Lesson 1</title>
+	</head>
+	<body class="min-h-screen flex flex-col">
+		<Header />
+		<main class="flex-1">
+			<slot />
+		</main>
+	</body>
+</html>
+

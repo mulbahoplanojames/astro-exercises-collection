@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const articles = await getCollection("articles");
+
+// console.log(articles)
+---
+
+<Layout>
+    <section class="md:px-20  px-4 py-18">
+       <h1>Article Page</h1> 
+
+       <div class="mt-5">
+           <ul>
+               {
+                   articles.map((article) => (
+                       <li class="mb-4 text-blue-800">
+                           <a href={`/articles/${article.slug}`}>{article.data.title}</a>
+                       </li>
+                   ))
+               }
+           </ul>
+       </div>
+    </section>
+</Layout>
