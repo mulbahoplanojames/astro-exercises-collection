@@ -6,7 +6,7 @@ const postCollection = defineCollection({
     title: z.string(),
     author: z.string(),
     categories: z.array(z.string()),
-    data: z.string(),
+    date: z.string(),
     featured: z.boolean(),
     image: z.string(),
   }),
@@ -17,7 +17,7 @@ const articlesCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     author: z.string(),
-    data: z.string(),
+    date: z.string(),
     featured: z.boolean(),
     image: z.string(),
   }),

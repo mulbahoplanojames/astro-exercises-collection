@@ -17,6 +17,7 @@ const articles = await getCollection("articles");
                    articles.map((article) => (
                        <li class="mb-4 text-blue-800">
                            <a href={`/articles/${article.slug}`}>{article.data.title}</a>
+                           <p>{article.data.date}</p>
                        </li>
                    ))
                }

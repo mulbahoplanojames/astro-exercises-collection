@@ -17,6 +17,6 @@ export const navLinks = [
   },
   {
     label: "Login",
-    path: "/loginnav",
+    path: "/login",
   },
 ];
